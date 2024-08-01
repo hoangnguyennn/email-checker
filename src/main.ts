@@ -1,12 +1,22 @@
 import './styles/main.scss'
 
-const sum = (a: number, b: number) => {
-  return a + b
-}
+const checkBtnEl: HTMLButtonElement = document.querySelector('.check')
+const inputEl: HTMLTextAreaElement = document.querySelector('.input')
+const contentKey = 'input-content'
 
-const sumOfMany = (...nums: number[]) => {
-  return nums.reduce((total, num) => total + num, 0)
-}
+// khởi tạo giá trị từ localStorage
+const initContent = localStorage.getItem(contentKey) || ''
+inputEl.value = initContent
 
-console.log(sum(1, 2))
-console.log(sumOfMany(1, 2, 3, 4, 5, 6, 7, 8, 9, 10))
+// lưu lại giá trị đã nhập vào localStorage
+inputEl.addEventListener('input', () => {
+  localStorage.setItem(contentKey, inputEl.value)
+})
+
+// xử lý nội dung đã nhập khi click vào button kiểm tra
+checkBtnEl.addEventListener('click', () => {
+  const inputContent = inputEl.value
+  const parser = new DOMParser()
+  const doc = parser.parseFromString(inputContent, 'text/html')
+  console.log(doc)
+})

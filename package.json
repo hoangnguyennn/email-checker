@@ -1,7 +1,7 @@
 {
-  "name": "webpack-typescript-starter",
-  "version": "0.0.0",
-  "description": "",
+  "name": "email-checker",
+  "version": "0.0.1",
+  "description": "A repo is used to verify HTML content across email systems",
   "author": "hoangnguyennn <nvanhoang188@gmail.com>",
   "scripts": {
     "dev": "webpack serve --mode development",
