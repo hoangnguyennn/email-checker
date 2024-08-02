@@ -1,3 +1,4 @@
+import { checkUnsupportTags } from './checkers'
 import './styles/main.scss'
 
 const checkBtnEl: HTMLButtonElement = document.querySelector('.check')
@@ -18,5 +19,7 @@ checkBtnEl.addEventListener('click', () => {
   const inputContent = inputEl.value
   const parser = new DOMParser()
   const doc = parser.parseFromString(inputContent, 'text/html')
-  console.log(doc)
+
+  const results = checkUnsupportTags(doc)
+  console.log({ results })
 })

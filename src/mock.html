@@ -1,0 +1,216 @@
+<html>
+  <head>
+    <meta charset="utf8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Webpack + TypeScript</title>
+    <style>
+      * {
+        margin: 0;
+      }
+
+      *,
+      *:before,
+      *:after {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: sans-serif;
+        color: #333;
+      }
+
+      @keyframes slidein {
+        from {
+          transform: translateX(0%);
+        }
+
+        to {
+          transform: translateX(100%);
+        }
+      }
+
+      @media (hover: hover) {
+        abbr:hover {
+          color: limegreen;
+          transition-duration: 1s;
+        }
+      }
+
+      @media not all and (hover: hover) {
+        abbr::after {
+          content: ' (' attr(title) ')';
+        }
+
+        .Loc__ImgHeader {
+          margin: 0px auto 32px auto;
+          width: 199.21px;
+          height: 34px;
+          padding-bottom: 32px;
+          padding-top: 24px;
+          justify-self: center;
+        }
+      }
+
+      @page {
+        margin: 1cm;
+      }
+
+      @font-face {
+        font-family: 'Trickster';
+        src: local('Trickster'),
+          url('trickster-COLRv1.otf') format('opentype') tech(color-COLRv1),
+          url('trickster-outline.otf') format('opentype'),
+          url('trickster-outline.woff') format('woff');
+      }
+
+      a {
+        color: #0367a8;
+      }
+
+      *,
+      *::after,
+      *::before {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+      }
+
+      .Loc__Container {
+        min-width: 592px;
+        height: auto;
+        background-color: rgba(238, 238, 238, 1);
+        color: white;
+        font-size: 16px;
+        font-weight: 500;
+        padding: 64px 24px;
+      }
+      .Loc__Container * {
+        font-family: 'Yu Gothic' !important;
+      }
+      .Loc__Img {
+        margin: auto;
+      }
+      .Loc__ImgHeader {
+        margin: 0px auto 32px auto;
+        width: 199.21px;
+        height: 34px;
+        padding-bottom: 32px;
+        padding-top: 24px;
+        justify-self: center;
+      }
+      .Loc__Content {
+        background-color: white;
+        color: #2e2e2e;
+        min-width: 592px;
+        max-width: 640px;
+        height: auto;
+        padding: 24px;
+        font-size: 12px;
+        margin: auto;
+        font-family: 'Yu Gothic';
+      }
+      .Loc__ContentMain p {
+        color: #2e2e2e;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 28.8px;
+      }
+      .Loc__ContentMain p br {
+        color: #2e2e2e;
+      }
+      .Loc__Content.Loc__Notification .Loc__ContentMain strong {
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 21.6px;
+        color: #191919;
+      }
+      .Loc__Content.Loc__Notification .Loc__ContentMain a {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 21px;
+        color: #0367a8 !important;
+        text-underline-offset: 4px;
+      }
+      .Loc__Content.Loc__Notification {
+        padding: 24px;
+      }
+      .Loc__Content.Loc__Notification .Loc__ContentMain > p {
+        margin-top: unset;
+        margin-bottom: unset;
+        padding-bottom: 35px;
+      }
+      .Loc__Content.Loc__Notification .Loc__MainSecondBlock {
+        display: block;
+        padding-top: 40px;
+      }
+      .Loc__Content .Loc__ContentNote.Loc__NoteNotification {
+        margin-bottom: 16px;
+      }
+      .Loc__ContentNote {
+        line-height: 18px;
+        font-size: 12px;
+        font-weight: 500;
+        color: #626262;
+      }
+      .Loc__Footer {
+        width: 592px;
+        padding-top: 24px;
+        margin: auto;
+      }
+      .Loc__FooterText {
+        display: flex;
+        justify-content: center;
+        width: max-content;
+        height: 30px;
+        align-items: center;
+        margin: 0 auto 28px auto;
+      }
+      .Loc__FooterText span {
+        margin-left: 3px;
+        margin-right: 3px;
+        font-size: 12px;
+        color: rgba(98, 98, 98, 1);
+        font-weight: 500;
+      }
+      .Loc__FooterText a {
+        color: rgba(98, 98, 98, 1);
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 18px;
+        text-underline-position: under;
+        text-decoration-color: rgba(0, 0, 0, 0.2);
+      }
+      .Loc__GrayTextNote {
+        color: rgba(98, 98, 98, 1);
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 18px;
+      }
+      .Loc__ImgFooter {
+        width: 102.63px;
+        height: 32px;
+        margin: auto;
+      }
+      .Loc__ContentImg {
+        width: 100%;
+        margin: 0 auto;
+        display: block;
+      }
+      .Invitation__HelpLink {
+        display: inline-block;
+        text-decoration: none;
+        background-color: #191919;
+        color: #ffffff;
+        line-height: 1.7;
+        font-size: 14px;
+        font-weight: bold;
+        padding: 8px 16px;
+        border: none;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body></body>
+</html>
