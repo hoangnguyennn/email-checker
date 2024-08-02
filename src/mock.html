@@ -36,6 +36,12 @@
         }
       }
 
+      @media (min-width: 701px) {
+      }
+
+      @media screen and (min-width: 701px) and (max-width: 900px) {
+      }
+
       @media not all and (hover: hover) {
         abbr::after {
           content: ' (' attr(title) ')';
@@ -49,6 +55,47 @@
           padding-top: 24px;
           justify-self: center;
         }
+      }
+
+      @import url('style.css') screen;
+
+      @namespace url(http://www.w3.org/1999/xhtml);
+
+      @supports (display: grid) {
+        body {
+          color: blue;
+        }
+      }
+
+      @font-feature-values Font One {
+        @styleset {
+          nice-style: 12;
+        }
+      }
+
+      @import url(https://fonts.googleapis.com/css2?family=Bungee+Spice);
+
+      @font-palette-values --Alternate {
+        font-family: 'Bungee Spice';
+        override-colors: 0 #00ffbb, 1 #007744;
+      }
+
+      @layer special {
+        p {
+          color: rebeccapurple;
+        }
+      }
+
+      @property --property-name {
+        syntax: '<color>';
+        inherits: false;
+        initial-value: #c0ffee;
+      }
+
+      @layer layerName, layerName2;
+
+      .alternate {
+        font-palette: --Alternate;
       }
 
       @page {
