@@ -1,10 +1,15 @@
 import { CSS_RULE, CSS_RULE_SYNTAX } from '../../constants'
-import { supportCssFull, supportCssProperties } from '../../rules/outlook'
+import {
+  TagNames,
+  supportCssFull,
+  supportCssProperties,
+  supportTags
+} from '../../rules/outlook'
 import { mapToObject } from '../../utils/convertDataType'
 import { cssTextToObject } from '../../utils/css/cssTextToObject'
 import { decomposeMediaQuery } from '../../utils/css/decomposeMediaQuery'
 
-type ReturnType = {
+export type ReturnType = {
   /** danh sách thuộc tính CSS không được hỗ trợ */
   properties: string[]
   /** danh sách thuộc tính CSS không được hỗ trợ trên tag cụ thể */
@@ -29,8 +34,6 @@ export const checkUnsupportCss = (
   const unsupportMediaTypes = new Set<string>()
   const unsupportMediaFeatures = new Set<string>()
   const unsupportMediaKeywords = new Set<string>()
-
-  console.log(CSSStyleSheet)
 
   for (let cssRule of CSSStyleSheet.cssRules) {
     /**
@@ -99,6 +102,10 @@ const checkUnsupportPropertiesWithTags = (
   Object.keys(styles).forEach(property => {
     elements.forEach(element => {
       const tagName = element.tagName.toLowerCase()
+
+      /** nếu thẻ không được hỗ trợ thì không cần kiểm tra CSS */
+      if (!supportTags.includes(tagName as TagNames)) return
+
       if (!(supportCssProperties[tagName] || []).includes(property)) {
         if (unsupportProperties.has(tagName)) {
           unsupportProperties.get(tagName).add(property)

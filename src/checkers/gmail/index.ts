@@ -1,2 +1,5 @@
 export { checkUnsupportTags } from './checkUnsupportTags'
-export { checkUnsupportCss } from './checkUnsupportCss'
+export {
+  checkUnsupportCss,
+  ReturnType as CheckUnsupportCssReturnType
+} from './checkUnsupportCss'

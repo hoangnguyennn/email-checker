@@ -60,3 +60,12 @@ body {
 .input:focus {
   box-shadow: 0 0 10px #409EFF;
 }
+
+code {
+  padding: .2em .4em;
+  margin: 0;
+  font-size: 85%;
+  white-space: break-spaces;
+  background-color: #eeeeee;
+  border-radius: 6px;
+}

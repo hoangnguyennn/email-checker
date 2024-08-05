@@ -8,7 +8,7 @@ import {
 import { cssTextToObject } from '../../utils/css/cssTextToObject'
 import { decomposeMediaQuery } from '../../utils/css/decomposeMediaQuery'
 
-type ReturnType = {
+export type ReturnType = {
   /** danh sách thuộc tính CSS không được hỗ trợ */
   properties: string[]
   /** các cú pháp không được hỗ trợ của media query */
