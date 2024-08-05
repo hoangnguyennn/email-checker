@@ -21,5 +21,5 @@ checkBtnEl.addEventListener('click', () => {
   const doc = parser.parseFromString(inputContent, 'text/html')
 
   const results = checkUnsupportTags(doc)
-  console.log({ results })
+  console.log(results)
 })

@@ -1,5 +1,6 @@
 type CustomObject = {
-  [key: string]: string
+  /** danh sách các thuộc tính */
+  [property: string]: string
 }
 
 /**
@@ -8,7 +9,7 @@ type CustomObject = {
  * @param cssText
  * @returns thông tin css ở dạng object
  */
-export const cssTextToObject = (cssText: string) => {
+export const cssTextToObject = (cssText: string): CustomObject => {
   const results: CustomObject = {}
 
   const declarations = cssText

@@ -23,6 +23,7 @@ type ReturnType = {
 
 /**
  * Kiểm tra các cú pháp CSS không hỗ trợ trong Gmail
+ * TODO: kiểm tra inline CSS
  *
  * @param {CSSStyleSheet} cssStyleSheet
  * @returns {ReturnType} các cú pháp CSS không được hõ trợ
