@@ -67,6 +67,7 @@ export const supportTags: Partial<TagNames>[] = [
   /** @deprecated */
   'strike',
   'strong',
+  'style',
   'sub',
   'sup',
   'table',
@@ -253,9 +254,13 @@ export const supportCssProperties = [
   'zoom'
 ]
 
-export const supportMediaQueryTypes = ['all', 'screen']
+export type SupportCssProperties = typeof supportCssProperties
 
-export const supportMediaQueryFeatures = [
+export const supportMediaTypes = ['all', 'screen']
+
+export type SupportMediaTypes = typeof supportMediaTypes
+
+export const supportMediaFeatures = [
   'min-width',
   'max-width',
   'min-device-width',
@@ -265,4 +270,8 @@ export const supportMediaQueryFeatures = [
   'max-resolution'
 ]
 
+export type SupportMediaFeatures = typeof supportMediaFeatures
+
 export const supportMediaKeywords = ['and', 'only']
+
+export type SupportMediaKeywords = typeof supportMediaKeywords

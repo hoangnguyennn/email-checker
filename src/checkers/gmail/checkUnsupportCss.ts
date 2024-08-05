@@ -1,9 +1,9 @@
 import { CSS_RULE, CSS_RULE_SYNTAX } from '../../constants'
 import {
   supportCssProperties,
+  supportMediaFeatures,
   supportMediaKeywords,
-  supportMediaQueryFeatures,
-  supportMediaQueryTypes
+  supportMediaTypes
 } from '../../rules/gmail'
 import { cssTextToObject } from '../../utils/css/cssTextToObject'
 import { decomposeMediaQuery } from '../../utils/css/decomposeMediaQuery'
@@ -62,12 +62,12 @@ export const checkUnsupportCss = (cssStyleSheet: CSSStyleSheet): ReturnType => {
         unsupportMediaKeywords.add(keyword)
       }
 
-      if (mediaType && !supportMediaQueryTypes.includes(mediaType)) {
+      if (mediaType && !supportMediaTypes.includes(mediaType)) {
         unsupportMediaTypes.add(mediaType)
       }
 
       mediaFeatures.forEach(feature => {
-        if (!supportMediaQueryFeatures.includes(feature)) {
+        if (!supportMediaFeatures.includes(feature)) {
           unsupportMediaFeatures.add(feature)
         }
       })
